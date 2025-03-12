@@ -84,3 +84,34 @@ foreign key (id_compra_itemCompra) references compra (id_compra)
 alter table compra add
 constraint FK_id_fornecedor_compra
 foreign key (id_fornecedor_compra) references fornecedor (id_fornecedor)
+
+
+-- CRUD
+-- Inserindo dados no BD
+
+insert into produto 
+  (nome_produto, valor_produto, qtde_produto, obs_produto)
+values
+  ('Chocolate',15.99,1995,'Próximo ao vencimento')
+
+select * from produto
+  
+insert into produto
+  (nome_produto,valor_produto,qtde_produto,obs_produto)
+values
+  ('Macarrão',8.83,347,''),
+  ('Salgadinho',2.52,713,''),
+  ('Biscoito',20.65,772,''),
+  ('Bolacha',19.79,813,''),
+  ('Aiiii Sim',2.69,952,''),
+  ('Leite Compreençado',16.35,661,''),
+  ('Moro Morango',10.8,978,'')
+
+
+update produto set nome_produto = 'Aiii Não', status_produto = 'INATIVO' where id_produto = 6
+
+update produto set nome_produto = 'Chocolate', status_produto = 'ATIVO' where id_produto = 1
+
+select * from produto where id_produto = 6
+
+delete produto where id_produto = 6
