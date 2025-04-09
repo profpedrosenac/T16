@@ -1,0 +1,49 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    font-family: Arial;
+}
+
+.larguraSite{
+    width: 1366px;
+    background-color: #e5e2e2;
+    margin: auto;
+}
+
+#topo{
+    height: 125px;
+    padding-top: 25px;
+}
+#menu{
+    height: 70px;
+    margin-top: 10px;
+}
+#banner{
+    height: 300px;
+    margin-top: 10px;
+}
+#conteudo{
+    height: 500px;
+    margin-top: 10px;
+}
+#rodape{
+    height: 100px;
+    margin-top: 10px;
+}
+#logo{
+    height: 100px;
+    width: 250px;
+    background-color: #a1cafc;
+    border-radius: 20px;
+    margin: auto;
+
+}
+.contInterno{
+    width: 316.5px;
+    height: 460px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: #a1cafc;
+    float: left;
+    border-radius: 20px;
+}

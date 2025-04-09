@@ -1,0 +1,29 @@
+body{
+    font-family: arial;
+}
+
+.lID{
+    width: 50px;
+}
+.lNome{
+    width: 200px;
+}
+.lIdade{
+    width: 75px;
+}
+.lProfissao{
+    width: 350px;
+}
+.corTitulo{
+    background-color: gray;
+}
+.corColunas{
+    background-color: white;
+    transition: background-color 1s;
+}
+.corColunas:hover{
+    background-color: chartreuse;
+}
+.tabela2{
+    width: 100%;
+}

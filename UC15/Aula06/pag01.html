@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <h1>Trabalhando com Tabelas</h1>
+    <hr>
+    <table border="1" align="center">
+        <thead>
+            <tr>
+                <th colspan="4">Tabela de nomes para Medieval</th>
+                <th rowspan="2">Personagens</th>
+            </tr>
+            <tr class="corTitulo">
+                <th class="lID">Id</th>
+                <th class="lNome">Nome</th>
+                <th class="lIdade">Idade</th>
+                <th class="lProfissao">Profissão</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="corColunas">
+                <td>1</td>
+                <td>Asdrubal</td>
+                <td>155</td>
+                <td>Mago</td>
+                <td rowspan="3" style="text-align: center;">P<br>e<br>r<br>s<br>o<br>n<br>a<br>g<br>e<br>n<br>s</td>
+            </tr>
+            <tr class="corColunas">
+                <td>2</td>
+                <td>Benegundes</td>
+                <td>38</td>
+                <td>Medieval</td>
+            </tr>
+            <tr class="corColunas">
+                <td>3</td>
+                <td>Matuzalem</td>
+                <td>386</td>
+                <td>Caçador de Bruxa</td>
+            </tr>
+        </tbody>
+        <tfoot class="corTitulo">
+            <th class="lID">Id</th>
+            <th class="lNome">Nome</th>
+            <th class="lIdade">Idade</th>
+            <th class="lProfissao">Profissão</th>
+            <th>Personagem</th>
+        </tfoot>
+    </table>
+    <br><br>
+    <table border="1" class="tabela2">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+</body>
+</html>

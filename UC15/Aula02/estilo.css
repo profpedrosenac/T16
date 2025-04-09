@@ -1,0 +1,23 @@
+body{
+    font-family: arial;
+    background-color: #DDD;
+    background-image: url('img/02.jpg');
+    background-repeat: no-repeat;
+    background-position: 25px 50px;
+    background-attachment: fixed;
+    margin-left: 350px;
+    text-align: justify;
+}
+.textoCentro{
+    text-align: center;
+}
+.margimDireita{
+    margin-right: 10px;
+}
+.margimEsquerda{
+    margin-left: 10px;
+}
+h1{
+    background-image: url('img/03.jpg');
+    background-attachment: fixed;
+}
