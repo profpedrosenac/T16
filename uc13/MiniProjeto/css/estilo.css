@@ -1,0 +1,119 @@
+.form-container {
+    background: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    padding: 30px;
+    margin-top: 20px;
+}
+
+.form-header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 20px;
+    border-radius: 15px 15px 0 0;
+    margin: -30px -30px 30px -30px;
+    text-align: center;
+}
+
+.search-section {
+    background: #f8f9fa;
+    border: 1px solid #e9ecef;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 25px;
+}
+
+.btn-custom {
+    border-radius: 25px;
+    padding: 10px 30px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-primary-custom {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+}
+
+.btn-success-custom {
+    background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
+    border: none;
+}
+
+.btn-warning-custom {
+    background: linear-gradient(135deg, #ffc107 0%, #fd7e14 100%);
+    border: none;
+    color: white;
+}
+
+.btn-danger-custom {
+    background: linear-gradient(135deg, #dc3545 0%, #e83e8c 100%);
+    border: none;
+}
+
+.btn-info-custom {
+    background: linear-gradient(135deg, #17a2b8 0%, #6f42c1 100%);
+    border: none;
+}
+
+.btn-primary-custom:hover,
+.btn-success-custom:hover,
+.btn-warning-custom:hover,
+.btn-danger-custom:hover,
+.btn-info-custom:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.form-control, .form-select {
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: #667eea;
+    box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+}
+
+.photo-preview {
+    width: 150px;
+    height: 150px;
+    border: 3px dashed #dee2e6;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f9fa;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.photo-preview:hover {
+    border-color: #667eea;
+    background: #e7f1ff;
+}
+
+.photo-preview img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}
+
+.required {
+    color: #dc3545;
+}
+
+.readonly-field {
+    background-color: #f8f9fa;
+    border-color: #ced4da;
+    color: #6c757d;
+}
+
+.action-buttons {
+    background: #f8f9fa;
+    border-radius: 10px;
+    padding: 20px;
+    margin-top: 25px;
+    border: 1px solid #e9ecef;
+}
