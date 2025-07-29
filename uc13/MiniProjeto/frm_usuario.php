@@ -1,3 +1,4 @@
+<?php include_once("crud_usuario.php"); ?>
 
 <body class="bg-light">
     <div class="container">
@@ -13,7 +14,7 @@
                     </div>
 
                     <!-- Formulário de Pesquisa -->
-                    <form action="crud_usuario.php" method="POST" class="mb-3">
+                    <form action="sistema.php?tela=usuario" method="POST" class="mb-3">
                         <div class="search-section">
                             <div class="row">
                                 <div class="col-md-8 mb-3">
@@ -35,7 +36,7 @@
                     </form>
 
                     <!-- Formulário Principal -->
-                    <form id="userForm" action="crud_usuario.php" method="POST" enctype="multipart/form-data">
+                    <form id="userForm" action="sistema.php?tela=usuario" method="POST" enctype="multipart/form-data">
                         
                         <!-- Campos de Informação -->
                         <div class="row mb-4">
@@ -45,7 +46,8 @@
                                     ID do Usuário
                                 </label>
                                 <input type="text" class="form-control readonly-field" id="txtId" name="txtId" 
-                                       placeholder="Auto gerado pelo sistema" readonly>
+                                       placeholder="Auto gerado pelo sistema" readonly 
+                                       value="<?=$id ?>">
                             </div>
 
                             <div class="col-md-6 mb-3">
@@ -54,7 +56,8 @@
                                     Data de Cadastro
                                 </label>
                                 <input type="text" class="form-control readonly-field" id="txtDataCadastro" name="txtDataCadastro" 
-                                       placeholder="Data será preenchida automaticamente" readonly>
+                                       placeholder="Data será preenchida automaticamente" readonly
+                                       value="<?=$data ?>">
                             </div>
                         </div>
                         
@@ -66,7 +69,8 @@
                                     Nome Completo <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="txtNome" name="txtNome" 
-                                       placeholder="Digite o nome completo" maxlength="50" required>
+                                       placeholder="Digite o nome completo" maxlength="50" required
+                                       value="<?=$nome ?>">
                                 <div class="invalid-feedback">
                                     Por favor, informe o nome do usuário.
                                 </div>
@@ -83,7 +87,8 @@
                                     Login <span class="required">*</span>
                                 </label>
                                 <input type="text" class="form-control" id="txtLogin" name="txtLogin" 
-                                       placeholder="Digite o login" maxlength="30" required>
+                                       placeholder="Digite o login" maxlength="30" required 
+                                       value="<?=$login ?>">
                                 <div class="invalid-feedback">
                                     Por favor, informe o login do usuário.
                                 </div>
@@ -115,11 +120,11 @@
                                 </label>
                                 <select class="form-select" id="txtFuncao" name="txtFuncao" required>
                                     <option value="">Selecione a função</option>
-                                    <option value="Administrador">Administrador</option>
-                                    <option value="Gerente">Gerente</option>
-                                    <option value="Operador">Operador</option>
-                                    <option value="Usuário">Usuário</option>
-                                    <option value="Suporte">Suporte</option>
+                                    <option value="Administrador" <?=($funcao=="Administrador")?'selected':'' ?>>Administrador</option>
+                                    <option value="Gerente" <?=($funcao=="Gerente")?'selected':'' ?>>Gerente</option>
+                                    <option value="Operador" <?=($funcao=="Operador")?'selected':'' ?>>Operador</option>
+                                    <option value="Usuário" <?=($funcao=="Usuário")?'selected':'' ?>>Usuário</option>
+                                    <option value="Suporte" <?=($funcao=="Suporte")?'selected':'' ?>>Suporte</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Por favor, selecione a função do usuário.
@@ -135,10 +140,10 @@
                                 </label>
                                 <select class="form-select" id="txtStatus" name="txtStatus" required>
                                     <option value="">Selecione o status</option>
-                                    <option value="Ativo">Ativo</option>
-                                    <option value="Inativo">Inativo</option>
-                                    <option value="Suspenso">Suspenso</option>
-                                    <option value="Pendente">Pendente</option>
+                                    <option value="Ativo" <?=($status=="Ativo")?'selected':'' ?>>Ativo</option>
+                                    <option value="Inativo" <?=($status=="Inativo")?'selected':'' ?>>Inativo</option>
+                                    <option value="Suspenso" <?=($status=="Suspenso")?'selected':'' ?>>Suspenso</option>
+                                    <option value="Pendente" <?=($status=="Pendente")?'selected':'' ?>>Pendente</option>
                                 </select>
                                 <div class="invalid-feedback">
                                     Por favor, selecione o status do usuário.
@@ -158,6 +163,7 @@
                                             <p class="text-muted mt-2">Clique para adicionar foto</p>
                                         </div>
                                         <img id="photo-preview-img" style="display: none;">
+                                        <img id="" src="<?='imagem/'.$id.'/'.$foto ?>">
                                 </div>
                                 <input type="file" class="form-control d-none" id="txtFoto" name="txtFoto" 
                                        accept="image/*" onchange="previewPhoto(this)">
@@ -172,7 +178,7 @@
                                 </label>
                                 <textarea class="form-control" id="txtObs" name="txtObs" 
                                           rows="6" placeholder="Digite observações sobre o usuário..." 
-                                          maxlength="255"></textarea>
+                                          maxlength="255"><?=$obs ?></textarea>
                                 <div class="form-text">
                                     <span id="char-count"></span>/255 caracteres
                                 </div>

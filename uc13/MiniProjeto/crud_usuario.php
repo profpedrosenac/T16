@@ -1,17 +1,15 @@
-<pre>
-    <?php
-        print_r($_POST);
-    ?>
-</pre>
-
-<pre>
-    <?php
-        print_r($_FILES);
-    ?>
-</pre>
-
-
 <?php
+
+        $id = "";
+        $data = "";
+        $nome = "";
+        $login = "";
+        $senha = "";
+        $funcao = "";
+        $status = "";
+        $obs = "";
+        $foto = "";
+
     if (!$_POST) {
         return;
     }
@@ -128,11 +126,22 @@
 
             if ($sql->rowCount() > 0) {
                 foreach ($sql as $row) {
-                    echo '<pre>';
-                    print_r($row);
-                    echo '</pre>';
+                    // echo '<pre>';
+                    // print_r($row);
+                    // echo '</pre>';
 
-                    echo '<img src="imagem/'.$row[0].'/'.$row['foto_usuario'].'" alt="">';
+                    // echo '<img src="imagem/'.$row[0].'/'.$row['foto_usuario'].'" alt="">';
+
+                    $id = $row[0];
+                    $data = $row[6];
+                    $nome = $row[1];
+                    $login = $row[2];
+                    $senha = $row[3];
+                    $funcao = $row[5];
+                    $status = $row[8];
+                    $obs = $row[7];
+                    $foto = $row[4];
+
                 }
             } else {
                 echo '<p>Nenhum usuário encontrado com esse nome.</p>';
@@ -142,8 +151,3 @@
         }
     }    
 ?>
-<hr>
-<p>
-    <a href="sistema.php?tela=usuario">VOLTAR</a>
-</p>
-
