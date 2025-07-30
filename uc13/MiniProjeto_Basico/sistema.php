@@ -32,28 +32,10 @@
                         include_once('_dashboard.php');
                     }elseif ($_GET['tela'] == "usuario"){
                         include_once('frm_usuario.php'); 
-                    }elseif ($_GET['tela'] == "usuario2"){
-                        include_once('frm_usuario2.php'); 
-                    }elseif ($_GET['tela'] == "categoria"){
-                        include_once('frm_categoria.php');
-                    }elseif ($_GET['tela'] == "produto"){
-                        include_once('frm_produto.php');
-                    }elseif ($_GET['tela'] == "fornecedor"){
-                        include_once('frm_fornecedor.php');
-                    }elseif ($_GET['tela'] == "movimentacao"){
-                        include_once('frm_movimentacao.php');
                     }elseif ($_GET['tela'] == "cliente"){
                         include_once('_cliente.php'); 
                     }elseif ($_GET['tela'] == "venda"){
                         include_once('_venda.php'); 
-                    }elseif ($_GET['tela'] == "tabelaUsuario"){
-                        include_once('tabela_usuario.php');
-                    }elseif ($_GET['tela'] == "tabelaFornecedor"){
-                        include_once('tabela_fornecedor.php');
-                    }elseif ($_GET['tela'] == "tabelaProduto"){
-                        include_once('tabela_produto.php'); 
-                    }elseif ($_GET['tela'] == "tabelaCategoria"){
-                        include_once('tabela_categoria.php'); 
                     }else{
                         include_once('404.html');
                     }
